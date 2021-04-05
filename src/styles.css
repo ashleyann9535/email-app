@@ -1,0 +1,69 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background: #dbedf3;
+  padding-top: 20px;
+}
+
+.App h1 {
+  color: #404b69;
+}
+
+.App h3 {
+  color: #f73859;
+  padding-bottom: 20px;
+}
+
+.App .viewScreen {
+  padding: 1% 10%;
+  padding-left: 20%;
+}
+
+.Directions {
+  text-align: left;
+  max-width: 25rem;
+  margin-right: 2rem;
+}
+
+.Form {
+  text-align: left;
+  margin-left: 15px;
+}
+
+.Form .inputName {
+  margin-right: 10%;
+}
+
+.Form textarea {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.Form .submit {
+  margin: 10px;
+  background: #283149;
+  color: #f73859;
+  font-size: 17px;
+}
+.Form .submit:hover {
+  background: #404b69;
+}
+
+.Footer footer {
+  color: #283149;
+  padding-top: 175px;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 1375px) {
+  .App .viewScreen {
+    padding: 1% 10%;
+  }
+}
+
+@media (max-width: 1225px) {
+  .App .viewScreen {
+    padding: 1% 5%;
+    text-align: center;
+  }
+}
