@@ -1,5 +1,6 @@
 import React from "react";
 
+
 function Email(props) {
   let CapitalName = props.name[0].toUpperCase() + props.name.slice(1);
 
@@ -44,5 +45,3 @@ function Email(props) {
 }
 
 export default Email;
-
-// {name} is a {possivePronoun} and {pronoun}.
