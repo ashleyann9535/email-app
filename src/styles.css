@@ -37,6 +37,12 @@
   display: inline-table;
 }
 
+.Email button {
+  float: right;
+  margin-right: 10px;
+  border-radius: 7px;
+}
+
 .Form {
   text-align: left;
   margin-left: 15px;
