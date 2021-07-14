@@ -37,15 +37,19 @@
   display: inline-table;
 }
 
+.Email .close {
+  float: right;
+}
+
+.Email .complete {
+  float: left;
+  margin-right: 5px;
+}
+
 .Email .copy {
   float: right;
   margin-right: 10px;
   border-radius: 7px;
-}
-
-.Email .close {
-  float: right;
-  
 }
 
 .Form {

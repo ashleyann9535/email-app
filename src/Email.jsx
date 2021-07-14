@@ -64,7 +64,7 @@ function Email(props) {
       <button className="close" onClick={handleDelete}>
         <CloseIcon />
       </button>
-      <span onClick={handleComplete}>
+      <span className="complete" onClick={handleComplete}>
         {done ? <CheckBoxIcon/> : <CheckBoxOutlineBlankIcon />}
       </span>
       <h5>{CapitalName}</h5>
