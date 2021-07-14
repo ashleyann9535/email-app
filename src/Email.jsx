@@ -4,6 +4,7 @@ import {CopyToClipboard} from 'react-copy-to-clipboard';
 import CloseIcon from '@material-ui/icons/Close';
 
 
+
 function Email(props) {
   let CapitalName = props.name[0].toUpperCase() + props.name.slice(1);
 
@@ -43,6 +44,9 @@ function Email(props) {
 
   function makeCopy(){
     setCopy(true);
+    setTimeout(()=> {
+      setCopy(false);
+    }, 1000);
   }
 
    function handleDelete(){
@@ -55,7 +59,7 @@ function Email(props) {
       <h5>{CapitalName}</h5>
       <p > {returnInputs(props.text)} </p>
       <CopyToClipboard text={returnInputs(props.text)} onCopy={makeCopy}>
-      <button className="copy"><FileCopyIcon /></button>
+      <button className="copy">{copy ? "Copied!" : <FileCopyIcon />}</button>
       </CopyToClipboard>
     </div>
   );
