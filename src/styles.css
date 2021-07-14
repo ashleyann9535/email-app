@@ -37,10 +37,15 @@
   display: inline-table;
 }
 
-.Email button {
+.Email .copy {
   float: right;
   margin-right: 10px;
   border-radius: 7px;
+}
+
+.Email .close {
+  float: right;
+  
 }
 
 .Form {

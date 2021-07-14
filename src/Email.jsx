@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import FileCopyIcon from '@material-ui/icons/FileCopy';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
+import CloseIcon from '@material-ui/icons/Close';
 
 
 function Email(props) {
@@ -44,14 +45,17 @@ function Email(props) {
     setCopy(true);
   }
 
-   
+   function handleDelete(){
+     props.onDelete(props.id)
+   }
 
   return (
     <div className="Email">
+      <button className="close" onClick={handleDelete}><CloseIcon /></button>
       <h5>{CapitalName}</h5>
       <p > {returnInputs(props.text)} </p>
       <CopyToClipboard text={returnInputs(props.text)} onCopy={makeCopy}>
-      <button ><FileCopyIcon /></button>
+      <button className="copy"><FileCopyIcon /></button>
       </CopyToClipboard>
     </div>
   );

@@ -17,6 +17,14 @@ export default function App() {
     });
   }
 
+  function deleteNote(id){
+    setEmails((prevNames)=> {
+      return prevNames.filter((emailItem, index) => {
+        return index !== id;
+      });
+    })
+  }
+
   return (
     <div className="App">
       <h1>Eazmail: Email made easy</h1>
@@ -40,6 +48,7 @@ export default function App() {
             name={studentName.name}
             gender={studentName.gender}
             text={studentName.text}
+            onDelete={deleteNote}
           />
         );
       })}
