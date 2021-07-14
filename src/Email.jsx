@@ -1,9 +1,9 @@
-import React, {useState} from "react";
-import FileCopyIcon from '@material-ui/icons/FileCopy';
-import {CopyToClipboard} from 'react-copy-to-clipboard';
-import CloseIcon from '@material-ui/icons/Close';
-
-
+import React, { useState } from "react";
+import FileCopyIcon from "@material-ui/icons/FileCopy";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import CloseIcon from "@material-ui/icons/Close";
+import CheckBoxOutlineBlankIcon from "@material-ui/icons/CheckBoxOutlineBlank";
+import CheckBoxIcon from '@material-ui/icons/CheckBox';
 
 function Email(props) {
   let CapitalName = props.name[0].toUpperCase() + props.name.slice(1);
@@ -42,24 +42,35 @@ function Email(props) {
 
   const [copy, setCopy] = useState(false);
 
-  function makeCopy(){
+  function makeCopy() {
     setCopy(true);
-    setTimeout(()=> {
+    setTimeout(() => {
       setCopy(false);
     }, 1000);
   }
 
-   function handleDelete(){
-     props.onDelete(props.id)
-   }
+  function handleDelete() {
+    props.onDelete(props.id);
+  }
+
+  const [done, setDone] = useState(false);
+
+  function handleComplete() {
+    setDone(true);
+  }
 
   return (
     <div className="Email">
-      <button className="close" onClick={handleDelete}><CloseIcon /></button>
+      <button className="close" onClick={handleDelete}>
+        <CloseIcon />
+      </button>
+      <span onClick={handleComplete}>
+        {done ? <CheckBoxIcon/> : <CheckBoxOutlineBlankIcon />}
+      </span>
       <h5>{CapitalName}</h5>
-      <p > {returnInputs(props.text)} </p>
+      <p> {returnInputs(props.text)} </p>
       <CopyToClipboard text={returnInputs(props.text)} onCopy={makeCopy}>
-      <button className="copy">{copy ? "Copied!" : <FileCopyIcon />}</button>
+        <button className="copy">{copy ? "Copied!" : <FileCopyIcon />}</button>
       </CopyToClipboard>
     </div>
   );
