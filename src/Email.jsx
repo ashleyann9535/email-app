@@ -56,7 +56,7 @@ function Email(props) {
   const [done, setDone] = useState(false);
 
   function handleComplete() {
-    setDone(true);
+    setDone(!done); 
   }
 
   return (
