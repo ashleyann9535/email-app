@@ -40,6 +40,18 @@ function Email(props) {
     return updatedText;
   }
 
+  function makeFirstUpper(p) {
+    let str = p;
+    let re = /([.]\s+)(.)|([?]\s+)(.)|([!]\s+)(.)/g;
+
+    let newStr = str.replace(re, (match) => {
+      console.log({ match });
+      return match.toUpperCase();
+    });
+
+    return newStr;
+  }
+
   const [copy, setCopy] = useState(false);
 
   function makeCopy() {
@@ -68,7 +80,7 @@ function Email(props) {
         {done ? <CheckBoxIcon/> : <CheckBoxOutlineBlankIcon />}
       </span>
       <h5>{CapitalName}</h5>
-      <p> {returnInputs(props.text)} </p>
+      <p> {makeFirstUpper(returnInputs(props.text))} </p>
       <CopyToClipboard text={returnInputs(props.text)} onCopy={makeCopy}>
         <button className="copy">{copy ? "Copied!" : <FileCopyIcon />}</button>
       </CopyToClipboard>
