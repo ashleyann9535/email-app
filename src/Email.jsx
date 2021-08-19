@@ -34,9 +34,9 @@ function Email(props) {
 
   function returnInputs(text) {
     let updatedText = text
-      .replace("{name}", CapitalName)
-      .replace("{pronoun}", pronoun)
-      .replace("{possessivePronoun}", pPronoun);
+      .replace(/{name}/g, CapitalName)
+      .replace(/{pronoun}/g, pronoun)
+      .replace(/{possessivePronoun}/g, pPronoun);
     return updatedText;
   }
 
