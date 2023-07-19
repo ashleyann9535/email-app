@@ -2,7 +2,7 @@ import React from "react";
 
 function Directions() {
   return (
-    <div className="Directions">
+    <div className="shadow p-3 mb-5 bg-white rounded Directions">
       <h4> How to make your email </h4>
       <ol>
         <li> Type your student's name </li>

@@ -72,7 +72,7 @@ function Email(props) {
   }
 
   return (
-    <div className="Email">
+    <div className="shadow-lg p-3 mb-5 bg-white rounded Email">
       <button className="close" onClick={handleDelete}>
         <CloseIcon />
       </button>

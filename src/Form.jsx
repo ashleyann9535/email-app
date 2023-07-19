@@ -75,7 +75,7 @@ function Form(props) {
           placeholder="Enter draft email..."
         ></textarea>
         <br />
-        <input className="submit" type="submit" placeholder="Submit" />
+        <input className="btn btn-info submit" type="submit" placeholder="Submit" />
       </form>
     </div>
   );

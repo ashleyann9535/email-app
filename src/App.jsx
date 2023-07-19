@@ -27,8 +27,10 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Eazmail: Email made easy</h1>
-      <h3>Personalized emails in minutes!</h3>
+      <nav class="navbar navbar-light bg-info">
+      <span class="navbar-brand mb-0 h1">Eazmail</span>
+      <div>Personalized emails in minutes!</div>
+      </nav>
       <Container fluid className="viewScreen">
         {/* xs={1} md={1} lg={3} */}
         <Row>
